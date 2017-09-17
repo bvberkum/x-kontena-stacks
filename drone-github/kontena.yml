@@ -1,5 +1,5 @@
 stack: bvberkum/drone-github
-version: 0.0.3
+version: 0.0.4
 description: |
   Drone is a Continuous Delivery platform built on Docker (github:bvberkum/x-kontena-stacks)
 variables:
