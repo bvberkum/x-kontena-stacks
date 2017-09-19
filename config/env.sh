@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-test -n "$KONTENA_ENV" || KONTENA_ENV=~/.local/etc/kontena.sh
+test -n "$KONTENA_ENV" || KONTENA_ENV="$HOME/.local/etc/kontena.sh"
 test -e "$KONTENA_ENV"&& {
   . $KONTENA_ENV
 } || {

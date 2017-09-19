@@ -1,5 +1,5 @@
-stack: bvberkum/drone-github
-version: 0.0.4
+stack: bvberkum/drone-github-dev
+version: 0.2.0-bvb2
 description: |
   Drone is a Continuous Delivery platform built on Docker (github:bvberkum/x-kontena-stacks)
 variables:
@@ -35,6 +35,22 @@ variables:
       prompt: GitHub secret
     to:
       vault: ${STACK}-gh-secret
+  bb_client_id:
+    type: string
+    from:
+      env: BITBUCKET_CLIENT
+      vault: ${STACK}-bb-client
+      prompt: BitBucket client id
+    to:
+      vault: ${STACK}-bb-client
+  bb_client_secret:
+    type: string
+    from:
+      env: BITBUCKET_SECRET
+      vault: ${STACK}-bb-secret
+      prompt: BitBucket secret
+    to:
+      vault: ${STACK}-bb-secret
   admins:
     type: string
     required: false
